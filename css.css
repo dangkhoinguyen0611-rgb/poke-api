@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    #6ec6ff 0%,
+    #9be7ff 58%,
+    #7f98c9 58%,
+    #95add4 82%,
+    #8bc34a 82%,
+    #7cb342 100%
+  );
+  padding: 20px;
+}
+
+.pokedex {
+  display: flex;
+  align-items: stretch;
+  filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.18));
+}
+
+/* NẮP TRÁI */
+.left-panel {
+  width: 290px;
+  background: #c81d25;
+  border: 3px solid #6e0b10;
+  border-radius: 16px 6px 6px 16px;
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.top-lights {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lens-outer {
+  width: 54px;
+  height: 54px;
+  background: #e6e8eb;
+  border: 3px solid #5e0d12;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px;
+}
+
+.lens-inner {
+  width: 36px;
+  height: 36px;
+  background: radial-gradient(circle at 30% 30%, #8be9fd, #0097a7 75%);
+  border: 2px solid #005662;
+  border-radius: 50%;
+}
+
+.mini-led {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #4d090d;
+}
+
+.mini-led.red { background: #ff3b30; }
+.mini-led.yellow { background: #ffcc00; }
+.mini-led.green { background: #64dd17; }
+
+.screen-frame {
+  background: #d9dde2;
+  border: 3px solid #5e0d12;
+  border-radius: 10px 10px 10px 28px;
+  padding: 10px 16px 12px;
+}
+
+.screen-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.screen-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #b71c1c;
+}
+
+.screen-display {
+  width: 100%;
+  height: 215px;
+  background: linear-gradient(to bottom, #b8ecff 0%, #e8f8ff 55%, #e6ccb2 55%, #d5bdaf 100%);
+  border: 2px solid #7a869a;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.screen-display img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.screen-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 4px;
+}
+
+.red-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #c81d25;
+  border: 2px solid #5e0d12;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.speaker span {
+  width: 42px;
+  height: 3px;
+  background: #555b66;
+  border-radius: 2px;
+}
+
+/* BẢN LỀ */
+.hinge {
+  width: 22px;
+  background: linear-gradient(to right, #9e131a, #e02832 45%, #7d0c12);
+  border-top: 3px solid #6e0b10;
+  border-bottom: 3px solid #6e0b10;
+}
+
+/* NẮP PHẢI */
+.right-panel {
+  width: 310px;
+  background: #c81d25;
+  border: 3px solid #6e0b10;
+  border-left: none;
+  border-radius: 6px 16px 16px 6px;
+  padding: 46px 16px 18px;
+  display: flex;
+}
+
+.right-inner {
+  width: 100%;
+  border: 2px solid #7d0c12;
+  border-radius: 8px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hint-text {
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.pokemon-select {
+  width: 100%;
+  background: #062e2b;
+  color: #e0f7fa;
+  border: 2px solid #021716;
+  border-radius: 4px;
+  padding: 7px 10px;
+  font-size: 14px;
+  text-align: center;
+  text-align-last: center;
+  margin-bottom: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.info-screen {
+  width: 100%;
+  flex: 1;
+  background: #062e2b;
+  border: 2px solid #021716;
+  border-radius: 4px;
+  padding: 14px 12px;
+  color: #e8f5e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #80cbc4;
+  margin-bottom: 3px;
+}
+
+.value {
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.bio-text {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+@media (max-width: 650px) {
+  .pokedex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-panel, .right-panel {
+    width: 300px;
+    border: 3px solid #6e0b10;
+    border-radius: 14px;
+  }
+  .hinge {
+    display: none;
+  }
+}
